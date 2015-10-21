@@ -18,11 +18,11 @@
 			var arr = [];
 			for (var i = 0; i < data.length; i++) {
 				if (Number(data[i])) {
-					arr.push(Number(data[i]))
+					arr.push(data[i])
 				}
 			};
 			function sorter(a,b) {
-			    return a > b ? true : false;
+			    return Number(a) > Number(b) ? true : false;
 			}
 			return arr.sort(sorter);
 		},
@@ -229,6 +229,7 @@
 				}
 			};
 		};
+		}
 	}
 
 
@@ -244,6 +245,6 @@
 	Initializes the component
 */
 compareTableData({
-	cellIndex : [1,2,3,4],
+	cellIndex : [1,2,3],
 	debug : true
 });
