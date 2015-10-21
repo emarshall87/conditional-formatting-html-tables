@@ -212,6 +212,11 @@
 			cells = settings.cellIndex;
 		if (settings.debug) console.log(settings); console.log(utilities); console.log(compareDataSet)
 		for (var i = 0; i < groups.length; i++) {
+			loopThroughGroup(cells)
+		};
+
+		function loopThroughGroup(cells){
+
 			for (var j = 0; j < cells.length; j++) {
 				var compareSet = Object.create(compareDataSet);
 				compareSet.group = groups[i];
@@ -228,7 +233,6 @@
 					);
 				}
 			};
-		};
 		}
 	}
 
